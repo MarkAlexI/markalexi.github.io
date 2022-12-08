@@ -7,6 +7,8 @@ const messages = {
     "menu.about": 'About',
     "menu.tools": 'Used tools',
     "menu.projects": 'Projects',
+    "call.title": 'JavaScript frontend developer',
+    "call.mail": 'Mail me',
     "tools.title": 'Used tools',
     "tools.descr": 'From idea to fantastic and incredible result.',
     "tools.text": 'Qwerty uiop asd fgh jklzx cvb nm wrty vgfhhj bj nk.',
@@ -42,6 +44,8 @@ const messages = {
     "menu.about": 'Про мене',
     "menu.tools": 'Інструменти',
     "menu.projects": 'Проекти',
+    "call.title": 'JavaScript фронтенд розробник',
+    "call.mail": 'Напишіть мені',
     "tools.title": 'Використовувані інструменти',
     "tools.descr": 'Заглушка. Допрацювати текст.',
     "tools.text": 'В роботі використовую різні інструменти - Webpack, ESLint, TS, etc.',
@@ -81,18 +85,35 @@ const i18n = VueI18n.createI18n({
 });
 
 const About = {
-  template: `<section class="call">
+  template: `<div>
+  <section class="call">
     <div class="container">
       <div class="call__inner">
-      <img src="/Portfolio/images/photo.png" />
+      <img src="/images/photo.png" />
         <div class="call__box">
-          <h5 class="call__title">Modern JS</h5>
+          <h5 class="call__title">{{ $t("call.title") }}</h5>
           <p class="call__text">ECMAScript 2022 and more. Codewars, Github and Stackoverflow.</p>
         </div>
-        <button @click="sendMail" class="call__btn">Mail me</button>
+        <button @click="sendMail" class="call__btn">{{ $t("call.mail") }}</button>
       </div>
     </div>
-  </section>`,
+  </section>
+  
+  <section class="info">
+    <div class="container">
+      <div class="info__inner">
+        <img class="info__images" src="images/logo.png" alt="images/logo.png">
+        <div class="info__content">
+          <h4 class="info__title title">My stats</h4>
+          <div class="info__text">
+            <p>JS, TS, Node.js, Vue.js, Git</p>
+          </div>
+          <button class="info__btn">Watch video</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>`,
   methods: {
     sendMail() {
       window.open('mailto: aacsmi06@gmail.com?subject=Vacancy&body=How do you do');
@@ -134,7 +155,7 @@ const Tools = {
           <div class="tools__items">
             <div v-for="i in toolsList" class="tools__item">
               <div class="tools__item-inner">
-                <img class="tools__item-img" :src="'/Portfolio/images/' + i.name + '.png'" :alt="'used tool ' + i.name" />
+                <img class="tools__item-img" :src="'/images/' + i.name + '.png'" :alt="'used tool ' + i.name" />
                 <h6 class="tools__item-title">{{ $t(i.text) }}</h6>
                 <p class="tools__item-text">{{ $t(i.motto) }}</p>
                 <a class="tools__item-link" :href="i.link">{{ $t("tool.text") + i.name }}</a>
@@ -167,7 +188,7 @@ const Projects = {
         
         <div class="project__items">
           <div v-for="i in projectsList" class="project__item">
-            <div class="project__item-img" :style="'background-image: url(' + '/Portfolio/images/' + i.img + '.png' + ');'">
+            <div class="project__item-img" :style="'background-image: url(' + '/images/' + i.img + '.png' + ');'">
               <div class="project__item-inner">
                 <a class="project__item-info" :href="'https://github.com/MarkAlexI/' + i.code + '/'">
                   <p class="project__item-code">{{ $t("projects.code") }}</p>
@@ -197,7 +218,6 @@ const routes = [
   { path: '/', component: About },
   { path: '/tools', component: Tools },
   { path: '/projects', component: Projects },
-  { path: '/Portfolio/', component: About },
   { path: '/:pathMatch(.*)*', component: NotFound }
 ];
 
@@ -255,17 +275,17 @@ app.component('drop-down-langs', {
     <transition>
       <div class="dropdown__menu" v-if="isDropdownOpened">
         <a href="#" class="dropdown__item" :class="selectedLanguage === 'en' ? 'active' : ''" @click.prevent="changeLanguage('en')">
-          <img src="/Portfolio/images/us.png" class="flag" /> {{ $t("dropdown.en") }}
+          <img src="/images/us.png" class="flag" /> {{ $t("dropdown.en") }}
         </a>
         <a href="#" class="dropdown__item" :class="selectedLanguage === 'ua' ? 'active' : ''" @click.prevent="changeLanguage('ua')">
-          <img src="/Portfolio/images/ua.png" class="flag" /> {{ $t("dropdown.ua") }}
+          <img src="/images/ua.png" class="flag" /> {{ $t("dropdown.ua") }}
         </a>
       </div>
     </transition>
   </div>`,
   computed: {
     myImageSource() {
-      return this.selectedLanguage === 'en' ? '/Portfolio/images/us.png' : '/Portfolio/images/ua.png';
+      return this.selectedLanguage === 'en' ? '/images/us.png' : '/images/ua.png';
     }
   },
   methods: {
