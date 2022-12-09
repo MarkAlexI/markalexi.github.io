@@ -8,7 +8,15 @@ const messages = {
     "menu.tools": 'Used tools',
     "menu.projects": 'Projects',
     "call.title": 'JavaScript frontend developer',
+    "call.text": 'Looking for offers.',
     "call.mail": 'Mail me',
+    "info.title": 'My stats',
+    "info.text": 'At the moment, I hold a managerial engineering and technical position at an energy company. For more than 6 years, I have been using the VBA language and the environment for processing information, automating routine actions, and working with databases to improve the operations of the unit etc.',
+    "info.text1": 'Recently, I became interested in web programming, having independently studied JavaScript and the environment - browsers, assemblers, transpilers, server Node.js.',
+    "info.text2": 'Education: I have two higher educations - economic and technical. I have management experience.',
+    "info.text3": 'Skills Basic: JS + HTML + CSS, Vue, Node.js, TS, English Intermediate. Additional: Webpack, SCSS, Git, SQL, Python.',
+    "info.text4": 'Goals: Develop useful applications that improve life, learn to play the piano.',
+    "info.text5": 'Hobbies: playing the guitar, craft juggling and bike rides with the family.',
     "tools.title": 'Used tools',
     "tools.descr": 'From idea to fantastic and incredible result.',
     "tools.text": 'Qwerty uiop asd fgh jklzx cvb nm wrty vgfhhj bj nk.',
@@ -45,7 +53,15 @@ const messages = {
     "menu.tools": 'Інструменти',
     "menu.projects": 'Проекти',
     "call.title": 'JavaScript фронтенд розробник',
+    "call.text": 'В пошуках пропозицій.',
     "call.mail": 'Напишіть мені',
+    "info.title": 'Про мене',
+    "info.text": 'На даний момент займаю керівну інженерно-технічну посаду на підприємстві енергетики. Для покращення діяльності підрозділу більше 6 років використовував мову VBA та оточення для обробки інформації, автоматизації рутинних дій, роботи з базами даних і т.ін.',
+    "info.text1": 'Останнім часом зацікавився веб-програмуванням, самостійно вивчивши JavaScript та оточення - браузери, зборщики, транспайлери, серверний Node.js.',
+    "info.text2": 'Освіта: маю дві вищих освіти - економічну та технічну. Маю досвід управління.',
+    "info.text3": 'Навички. Основні: JS + HTML + CSS, Vue, Node.js, TS, English Intermediate. Додаткові: Webpack, SCSS, Git, SQL, Python.',
+    "info.text4": 'Цілі: розробляти корисні застосунки, що покращують життя, навчитися грати на фортепіано.',
+    "info.text5": 'Хобі: гра на гітарі, крафт-жонглювання та велопоїздки з сім\'єю.',
     "tools.title": 'Використовувані інструменти',
     "tools.descr": 'Заглушка. Допрацювати текст.',
     "tools.text": 'В роботі використовую різні інструменти - Webpack, ESLint, TS, etc.',
@@ -92,7 +108,7 @@ const About = {
       <img src="/images/photo.png" />
         <div class="call__box">
           <h5 class="call__title">{{ $t("call.title") }}</h5>
-          <p class="call__text">ECMAScript 2022 and more. Codewars, Github and Stackoverflow.</p>
+          <p class="call__text">{{ $t("call.text") }}</p>
         </div>
         <button @click="sendMail" class="call__btn">{{ $t("call.mail") }}</button>
       </div>
@@ -104,9 +120,14 @@ const About = {
       <div class="info__inner">
         <img class="info__images" src="images/logo.png" alt="images/logo.png">
         <div class="info__content">
-          <h4 class="info__title title">My stats</h4>
+          <h4 class="info__title title">{{ $t("info.title") }}</h4>
           <div class="info__text">
-            <p>JS, TS, Node.js, Vue.js, Git</p>
+            <p>{{ $t("info.text") }}</p>
+            <p>{{ $t("info.text1") }}</p>
+            <p>{{ $t("info.text2") }}</p>
+            <p>{{ $t("info.text3") }}</p>
+            <p>{{ $t("info.text4") }}</p>
+            <p>{{ $t("info.text5") }}</p>
           </div>
           <button class="info__btn">Watch video</button>
         </div>

@@ -21,6 +21,16 @@ h6 {
   margin: 0px;
 }
 
+.info__text p {
+  margin-top: 1.3rem;
+}
+
+.info__text p::first-letter {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #284084;
+}
+
 /*move transition*/
 .moveInUp-enter-active {
   animation: fadeIn 1s ease-in;
@@ -60,9 +70,9 @@ h6 {
 }
 
 .dropdown {
-  position: absolute;
-  right: 80px;
-  top: 20px;
+  position: relative;
+  margin-left: auto;
+  margin-right: 20px;
   display: block;
   color: black;
 }
