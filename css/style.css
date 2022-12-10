@@ -109,6 +109,8 @@ a {
 }
 
 body {
+  display: flex;
+  justify-content: center;
   min-width: 320px;
   overflow-x: hidden;
   font-family: 'Arial', 'sans-serif';
@@ -672,6 +674,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    column-gap: 10px;
   }
 
   .project__item-img {

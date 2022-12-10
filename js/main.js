@@ -17,6 +17,7 @@ const messages = {
     "info.text3": 'Skills Basic: JS + HTML + CSS, Vue, Node.js, TS, English Intermediate. Additional: Webpack, SCSS, Git, SQL, Python.',
     "info.text4": 'Goals: Develop useful applications that improve life, learn to play the piano.',
     "info.text5": 'Hobbies: playing the guitar, craft juggling and bike rides with the family.',
+    "info.download": 'Download resume',
     "tools.title": 'Used tools',
     "tools.descr": 'From idea to fantastic and incredible result.',
     "tools.text": 'Qwerty uiop asd fgh jklzx cvb nm wrty vgfhhj bj nk.',
@@ -62,6 +63,7 @@ const messages = {
     "info.text3": 'Навички. Основні: JS + HTML + CSS, Vue, Node.js, TS, English Intermediate. Додаткові: Webpack, SCSS, Git, SQL, Python.',
     "info.text4": 'Цілі: розробляти корисні застосунки, що покращують життя, навчитися грати на фортепіано.',
     "info.text5": 'Хобі: гра на гітарі, крафт-жонглювання та велопоїздки з сім\'єю.',
+    "info.download": 'Завантажити резюме',
     "tools.title": 'Використовувані інструменти',
     "tools.descr": 'Заглушка. Допрацювати текст.',
     "tools.text": 'В роботі використовую різні інструменти - Webpack, ESLint, TS, etc.',
@@ -129,7 +131,7 @@ const About = {
             <p>{{ $t("info.text4") }}</p>
             <p>{{ $t("info.text5") }}</p>
           </div>
-          <button class="info__btn">Watch video</button>
+          <button @click="downloadResume" class="info__btn">{{ $t("info.download") }}</button>
         </div>
       </div>
     </div>
@@ -138,6 +140,13 @@ const About = {
   methods: {
     sendMail() {
       window.open('mailto: aacsmi06@gmail.com?subject=Vacancy&body=How do you do');
+    },
+    downloadResume() {
+      let link = document.createElement('a');
+      link.download = 'resume.txt';
+      link.type = 'text/plain';
+      link.href = './resume.txt';
+      link.click();
     }
   },
   mounted() {
@@ -262,7 +271,7 @@ app.component('my-header', {
           <div class="container">
             <div class="header__inner">
               <div class="logo">
-                <router-link to="/" class="logo__link">
+                <router-link to="/projects" class="logo__link">
                   <img class="logo__link-img" src="images/logo.png" alt="logo">
                 </router-link>
               </div>
