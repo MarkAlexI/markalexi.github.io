@@ -118,6 +118,7 @@ body {
   font-size: 16px;
   line-height: 18px;
   color: #9B9B9B;
+  background-color: #F9F6E5;
 }
 
 .button {
@@ -176,6 +177,13 @@ body {
   border: none;
   border-radius: 3px;
   text-transform: uppercase;
+  transition: all linear .5s;
+}
+
+.call__btn:hover {
+  background-color: #284084;
+  color: #F9F6E5;
+  border: 1px solid blue;
 }
 
 .call__inner img {
@@ -743,6 +751,13 @@ footer {
   border-radius: 3px;
   padding: 21px 26px;
   color: #F9F6E5;
+  transition: all linear .5s;
+}
+
+.info__btn:hover {
+  background-color: #F9F6E5;
+  color: #284084;
+  border: 1px solid blue;
 }
 
 @media (min-width: 640px) {
