@@ -90,10 +90,20 @@ h6 {
   box-shadow: 0 18px 36px rgba(0, 0, 0, 0.30), 0 14px 11px rgba(0, 0, 0, 0.22);
 }
 
+.dropdown__item {
+  background: 
+    linear-gradient(#1095c1 0 0) no-repeat
+    calc(200% - var(--i,0)*100%) 100% / 200% calc(100%*var(--i,0) + .08em);
+  transition: .3s calc(var(--i,0)*.3s), background-position .3s calc(.3s - calc(var(--i,0)*.3s));
+}
+
 .dropdown__item.active {
   display: block;
-  background-color: lightskyblue;
-  font-weight: 900;
+  --p: 75%;
+  background: linear-gradient(#1095c1 0 0) no-repeat calc(100% - var(--p, 0%))
+    100% / 200% var(--p, 0.08em);
+  color: blue;
+  z-index: 100;
 }
 
 ul,
@@ -219,11 +229,25 @@ body {
   padding: 15px;
   text-decoration: none;
   color: black;
+  
+  --c: #1095c1;
+  line-height: 1.2em;
+  background: conic-gradient(from -135deg at 100% 50%, var(--c) 90deg, #0000 0)
+      0 var(--p, 0%),
+    conic-gradient(from -135deg at 1.2em 50%, #0000 90deg, var(--c) 0) 100%
+      var(--p, 0%);
+  background-size: var(--s, 0%) 200%;
+  background-repeat: no-repeat;
+  transition: 0.4s ease-in, background-position 0s;
+
 }
 
 .menu__content>a:hover {
-  color: white;
-  background: #903C56;
+  --p: 100%;
+  --s: calc(
+    50% + 0.61em
+  );
+  color: #fff;
 }
 
 .menu__btn {
