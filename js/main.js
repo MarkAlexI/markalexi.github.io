@@ -353,8 +353,16 @@ app.component('drop-down-langs', {
 });
 
 app.component('my-footer', {
+  data() {
+    return {
+      currentYear: 2123
+    }
+  },
+  mounted() {
+    this.currentYear = (new Date).getFullYear();
+  },
   template: `<footer>
-    <p>MarkAlexI 2022 © Copyright</p>
+    <p>MarkAlexI 2022 - {{ currentYear }} © Copyright</p>
   </footer>`
 });
 
