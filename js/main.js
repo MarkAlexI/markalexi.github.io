@@ -19,8 +19,8 @@ const messages = {
     "info.text5": 'Hobbies: playing the guitar, craft juggling and bike rides with the family.',
     "info.download": 'Download resume',
     "tools.title": 'Used tools',
-    "tools.descr": 'From idea to fantastic and incredible result.',
-    "tools.text": 'Qwerty uiop asd fgh jklzx cvb nm wrty vgfhhj bj nk.',
+    "tools.descr": 'Tools and technologies that I like to work with.',
+    "tools.text": 'I use various tools in my work - Webpack, ESLint, TS, etc.',
     "tool.text": 'Project with ',
     "tool1.text": 'Love vanilla JS',
     "tool2.text": 'Use webpack',
@@ -73,7 +73,7 @@ const messages = {
     "info.text5": 'Хобі: гра на гітарі, крафт-жонглювання та велопоїздки з сім\'єю.',
     "info.download": 'Завантажити резюме',
     "tools.title": 'Використовувані інструменти',
-    "tools.descr": 'Заглушка. Допрацювати текст.',
+    "tools.descr": 'Інструменти та технології, з якими залюбки працюю.',
     "tools.text": 'В роботі використовую різні інструменти - Webpack, ESLint, TS, etc.',
     "tool.text": 'Проект з ',
     "tool1.text": 'Люблю JS',
@@ -136,7 +136,7 @@ const About = {
   <section class="info">
     <div class="container">
       <div class="info__inner">
-        <img class="info__images" src="images/logo.png" alt="images/logo.png">
+        <img class="info__images" src="images/me.png" alt="images/me.png">
         <div class="info__content">
           <h4 class="info__title title">{{ $t("info.title") }}</h4>
           <div class="info__text">
@@ -159,9 +159,9 @@ const About = {
     },
     downloadResume() {
       let link = document.createElement('a');
-      link.download = 'resume.txt';
-      link.type = 'text/plain';
-      link.href = './resume.txt';
+      link.download = 'markalexi_resume.docx';
+      link.type = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document';
+      link.href = './markalexi_resume.docx';
       link.click();
     }
   },
