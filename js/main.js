@@ -159,7 +159,9 @@ const About = {
     },
     downloadResume() {
       let link = document.createElement('a');
-      link.download = 'markalexi_resume.docx';
+      link.download = this.selectedLanguage === 'en'
+        ? 'markalexi_resume_eng.docx'
+        : 'markalexi_resume.docx';
       link.type = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document';
       link.href = './markalexi_resume.docx';
       link.click();
@@ -184,8 +186,8 @@ const Tools = {
         { text: 'tool2.text', motto: 'tool2.motto', link: 'https://markalexi.github.io/ticTacToeGame/', name: 'webpack' },
         { text: 'tool3.text', motto: 'tool3.motto', link: 'https://markalexi.github.io/toDoOnVue/', name: 'vue' },
         { text: 'tool4.text', motto: 'tool4.motto', link: 'https://markalexi.github.io/readAll/', name: 'ts' },
-        { text: 'tool5.text', motto: 'tool5.motto', link: 'https://markalexi.github.io/chatOnJS/', name: 'node-js' },
-        { text: 'tool6.text', motto: 'tool6.motto', link: 'https://markalexi.github.io/Portfolio/', name: 'css3' },
+        { text: 'tool5.text', motto: 'tool5.motto', link: 'https://github.com/markalexi/chatOnJS/', name: 'node-js' },
+        { text: 'tool6.text', motto: 'tool6.motto', link: 'https://markalexi.github.io/', name: 'css3' },
         { text: 'tool7.text', motto: 'tool7.motto', link: 'https://markalexi.github.io/filmMe/', name: 'webrtc' },
         { text: 'tool8.text', motto: 'tool8.motto', link: 'https://markalexi.github.io/deviceStats/', name: 'postcss' },
         { text: 'tool9.text', motto: 'tool9.motto', link: 'https://markalexi.github.io/organizer/', name: 'indexeddb' },
