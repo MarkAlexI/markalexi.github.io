@@ -159,11 +159,12 @@ const About = {
     },
     downloadResume() {
       let link = document.createElement('a');
-      link.download = this.selectedLanguage === 'en'
-        ? 'markalexi_resume_eng.docx'
-        : 'markalexi_resume.docx';
+      const suffix = this.$i18n.locale === 'en'
+        ? '_eng'
+        : '';
+      link.download = `markalexi_resume${suffix}.docx`;
       link.type = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document';
-      link.href = './markalexi_resume.docx';
+      link.href = `./markalexi_resume${suffix}.docx`;
       link.click();
     }
   },
