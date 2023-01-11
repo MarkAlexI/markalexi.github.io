@@ -51,6 +51,13 @@ const messages = {
     "projects4.name": 'Calendar with notes',
     "projects5.name": 'Converter of values',
     "projects6.name": 'Tic-Tac-Toe',
+    "projects7.name": 'Selfie maker',
+    "projects8.name": 'Stats of device',
+    "projects9.name": '-egg-language',
+    "projects10.name": 'To Do List',
+    "projects11.name": 'Photoslider',
+    "projects12.name": 'Convenient reader',
+    "projects13.name": 'Just chat',
     "page404.notFound": 'Page Not Found',
     "page404.info": 'Return on main page',
     "page404.back": 'Go Home'
@@ -105,6 +112,13 @@ const messages = {
     "projects4.name": 'Календар з нотатками',
     "projects5.name": 'Конвертер величин',
     "projects6.name": 'Хрестики-нулики',
+    "projects7.name": 'Застосунок для селфі',
+    "projects8.name": 'Дізнайся характеристики приладу',
+    "projects9.name": '-egg-language',
+    "projects10.name": 'Нотатник',
+    "projects11.name": 'Фотослайдер',
+    "projects12.name": 'Зручна читалка',
+    "projects13.name": 'Просто чат',
     "page404.notFound": 'Сторінку не знайдено',
     "page404.info": 'Повернутись на головну сторінку',
     "page404.back": 'На головну'
@@ -229,7 +243,14 @@ const Projects = {
         { name: 'projects3.name', img: 'paint', code: 'canvasPaint' },
         { name: 'projects4.name', img: 'calendar', code: 'organizer' },
         { name: 'projects5.name', img: 'converter', code: 'tryConvert' },
-        { name: 'projects6.name', img: 'tictactoe', code: 'ticTacToeGame' }
+        { name: 'projects6.name', img: 'tictactoe', code: 'ticTacToeGame' },
+        { name: 'projects7.name', img: 'filmme', code: 'filmMe' },
+        { name: 'projects8.name', img: 'devicestats', code: 'deviceStats' },
+        { name: 'projects9.name', img: 'egg', code: '-egg-language' },
+        { name: 'projects10.name', img: 'todo', code: 'toDoOnVue' },
+        { name: 'projects11.name', img: 'slider', code: 'photoSlider' },
+        { name: 'projects12.name', img: 'reader', code: 'readAll' },
+        { name: 'projects13.name', img: 'chat', code: 'chatOnJS' }
       ]
     }
   },
