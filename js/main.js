@@ -320,10 +320,14 @@ app.component('my-header', {
                 </router-link>
               </div>
               <slot></slot>
-              <nav class="menu">
+              <nav
+                class="menu"
+                >
                 <button class="menu__btn"></button>
                 
-                <div class="menu__content">
+                <div
+                  class="menu__content"
+                  >
                   <router-link to="/"> {{ $t("menu.about") }} </router-link>
                   <router-link to="/tools"> {{ $t("menu.tools") }} </router-link>
                   <router-link to="/projects"> {{ $t("menu.projects") }} </router-link>
