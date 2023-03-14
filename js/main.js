@@ -45,6 +45,7 @@ const messages = {
     "projects.title": 'Created projects',
     "projects.code": 'View code',
     "projects.result": 'View result',
+    "projects0.name": 'Music player',
     "projects1.name": 'Calculator',
     "projects2.name": 'Tetris',
     "projects3.name": 'Paint',
@@ -106,6 +107,7 @@ const messages = {
     "projects.title": 'Створені проекти',
     "projects.code": 'Перегляд коду',
     "projects.result": 'Наживо',
+    "projects0.name": 'Музичний програвач',
     "projects1.name": 'Калькулятор',
     "projects2.name": 'Тетріс',
     "projects3.name": 'Малювалка',
@@ -238,6 +240,7 @@ const Projects = {
   data() {
     return {
       projectsList: [
+        { name: 'projects0.name', img: 'player', code: 'musicPlayer' },
         { name: 'projects1.name', img: 'calc', code: 'Calculator' },
         { name: 'projects2.name', img: 'tetris', code: 'simpleTetris' },
         { name: 'projects3.name', img: 'paint', code: 'canvasPaint' },
