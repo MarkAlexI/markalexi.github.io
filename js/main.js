@@ -175,9 +175,9 @@ const About = {
     },
     downloadResume() {
       let link = document.createElement('a');
-      const suffix = this.$i18n.locale === 'en'
-        ? '_eng'
-        : '';
+      const suffix = this.$i18n.locale === 'en' ?
+        '_eng' :
+        '';
       link.download = `markalexi_resume${suffix}.docx`;
       link.type = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document';
       link.href = `./markalexi_resume${suffix}.docx`;
@@ -380,6 +380,50 @@ app.component('drop-down-langs', {
 
       setTimeout(() => this.isDropdownOpened = false, 3000);
     }
+  }
+});
+
+app.component('scroll-to-top', {
+  data() {
+    return {
+      rootElement: document.documentElement
+    }
+  },
+  template: `<button class="scrollToTopBtn"
+      @click="scrollToTop">
+      ↑ Scroll to top
+    </button>
+  `,
+  methods: {
+    scrollToTop() {
+      this.rootElement.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+  },
+  mounted() {
+    const target = document.querySelector(".header");
+    const scrollToTopBtn = document.querySelector(".scrollToTopBtn");
+
+    function callback(entries, observer) {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          scrollToTopBtn.classList.add("showBtn");
+        } else {
+          scrollToTopBtn.classList.remove("showBtn");
+        }
+      });
+    }
+
+    const options = {
+      root: window.document,
+      rootMargin: '20px',
+      threshold: 0,
+    }
+
+    let observer = new IntersectionObserver(callback, options);
+    observer.observe(target);
   }
 });
 
