@@ -32,6 +32,8 @@ const messages = {
     "tool8.text": 'Help from PostCSS',
     "tool9.text": 'Builded data with IndexedDB',
     "tool10.text": 'Give mobile with PWA',
+    "tool11.motto": 'Some fun',
+    "tool12.motto": 'Let\'s play',
     "tool1.motto": 'Mighty JavaScript',
     "tool2.motto": 'Comfortable work',
     "tool3.motto": 'It\'ll be reactive',
@@ -59,6 +61,7 @@ const messages = {
     "projects11.name": 'Photoslider',
     "projects12.name": 'Convenient reader',
     "projects13.name": 'Just chat',
+    "projects14.name": 'Browser eXT',
     "page404.notFound": 'Page Not Found',
     "page404.info": 'Return on main page',
     "page404.back": 'Go Home'
@@ -94,6 +97,8 @@ const messages = {
     "tool8.text": 'Корисний PostCSS',
     "tool9.text": 'Вбудована база данних: IndexedDB',
     "tool10.text": 'Стаємо мобільними з PWA',
+    "tool11.text": 'Браузерне розширення',
+    "tool12.text": 'Гра на Phaser3.js',
     "tool1.motto": 'Гнучкість та повсюдність',
     "tool2.motto": 'Зручний зборщик',
     "tool3.motto": 'Зробимо все реактивним',
@@ -104,6 +109,8 @@ const messages = {
     "tool8.motto": 'Спрощує розробку',
     "tool9.motto": 'Дані завжди доступні',
     "tool10.motto": 'Застосунки - це просто',
+    "tool11.motto": 'Трохи розваги',
+    "tool12.motto": 'Час грати',
     "projects.title": 'Створені проекти',
     "projects.code": 'Перегляд коду',
     "projects.result": 'Наживо',
@@ -121,6 +128,7 @@ const messages = {
     "projects11.name": 'Фотослайдер',
     "projects12.name": 'Зручна читалка',
     "projects13.name": 'Просто чат',
+    "projects14.name": 'Проста гра на Phaser3',
     "page404.notFound": 'Сторінку не знайдено',
     "page404.info": 'Повернутись на головну сторінку',
     "page404.back": 'На головну'
@@ -208,7 +216,9 @@ const Tools = {
         { text: 'tool7.text', motto: 'tool7.motto', link: 'https://markalexi.github.io/filmMe/', name: 'webrtc' },
         { text: 'tool8.text', motto: 'tool8.motto', link: 'https://markalexi.github.io/deviceStats/', name: 'postcss' },
         { text: 'tool9.text', motto: 'tool9.motto', link: 'https://markalexi.github.io/organizer/', name: 'indexeddb' },
-        { text: 'tool10.text', motto: 'tool10.motto', link: 'https://markalexi.github.io/Calculator/', name: 'pwa' }
+        { text: 'tool10.text', motto: 'tool10.motto', link: 'https://markalexi.github.io/Calculator/', name: 'pwa' },
+        { text: 'tool11.text', motto: 'tool11.motto', link: 'https://markalexi.github.io/eXT/', name: 'ext' },
+        { text: 'tool12.text', motto: 'tool12.motto', link: 'https://markalexi.github.io/simpleGameOnPhaser/', name: 'phaser' }
        ]
     }
   },
@@ -253,7 +263,8 @@ const Projects = {
         { name: 'projects10.name', img: 'todo', code: 'toDoOnVue' },
         { name: 'projects11.name', img: 'slider', code: 'photoSlider' },
         { name: 'projects12.name', img: 'reader', code: 'readAll' },
-        { name: 'projects13.name', img: 'chat', code: 'chatOnJS' }
+        { name: 'projects13.name', img: 'chat', code: 'chatOnJS' },
+        { name: 'projects14.name', img: 'phaser', code: 'simpleGameOnPhaser' }
       ]
     }
   },
