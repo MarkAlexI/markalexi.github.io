@@ -32,8 +32,8 @@ const messages = {
     "tool8.text": 'Help from PostCSS',
     "tool9.text": 'Builded data with IndexedDB',
     "tool10.text": 'Give mobile with PWA',
-    "tool11.motto": 'Some fun',
-    "tool12.motto": 'Let\'s play',
+    "tool11.text": 'Browser extension',
+    "tool12.text": 'Game on Phaser.js',
     "tool1.motto": 'Mighty JavaScript',
     "tool2.motto": 'Comfortable work',
     "tool3.motto": 'It\'ll be reactive',
@@ -44,6 +44,8 @@ const messages = {
     "tool8.motto": 'Simple development',
     "tool9.motto": 'Data on hands',
     "tool10.motto": 'Create applications',
+    "tool11.motto": 'Some fun',
+    "tool12.motto": 'Let\'s play',
     "projects.title": 'Created projects',
     "projects.code": 'View code',
     "projects.result": 'View result',
@@ -61,7 +63,8 @@ const messages = {
     "projects11.name": 'Photoslider',
     "projects12.name": 'Convenient reader',
     "projects13.name": 'Just chat',
-    "projects14.name": 'Browser eXT',
+    "projects14.name": 'Simple game on Phaser',
+    "projects15.name": 'Get Joke Ext',
     "page404.notFound": 'Page Not Found',
     "page404.info": 'Return on main page',
     "page404.back": 'Go Home'
@@ -129,6 +132,7 @@ const messages = {
     "projects12.name": 'Зручна читалка',
     "projects13.name": 'Просто чат',
     "projects14.name": 'Проста гра на Phaser3',
+    "projects15.name": 'Get Joke Ext',
     "page404.notFound": 'Сторінку не знайдено',
     "page404.info": 'Повернутись на головну сторінку',
     "page404.back": 'На головну'
@@ -217,7 +221,7 @@ const Tools = {
         { text: 'tool8.text', motto: 'tool8.motto', link: 'https://markalexi.github.io/deviceStats/', name: 'postcss' },
         { text: 'tool9.text', motto: 'tool9.motto', link: 'https://markalexi.github.io/organizer/', name: 'indexeddb' },
         { text: 'tool10.text', motto: 'tool10.motto', link: 'https://markalexi.github.io/Calculator/', name: 'pwa' },
-        { text: 'tool11.text', motto: 'tool11.motto', link: 'https://markalexi.github.io/eXT/', name: 'ext' },
+        { text: 'tool11.text', motto: 'tool11.motto', link: 'https://chrome.google.com/webstore/detail/gaefccmkkolgdkabjfekngcmagioflne', name: 'ext' },
         { text: 'tool12.text', motto: 'tool12.motto', link: 'https://markalexi.github.io/simpleGameOnPhaser/', name: 'phaser' }
        ]
     }
@@ -264,7 +268,8 @@ const Projects = {
         { name: 'projects11.name', img: 'slider', code: 'photoSlider' },
         { name: 'projects12.name', img: 'reader', code: 'readAll' },
         { name: 'projects13.name', img: 'chat', code: 'chatOnJS' },
-        { name: 'projects14.name', img: 'phaser', code: 'simpleGameOnPhaser' }
+        { name: 'projects14.name', img: 'phaser', code: 'simpleGameOnPhaser' },
+        { name: 'projects15.name', img: 'ext', code: 'getJokeBrowserExtension' }
       ]
     }
   },
